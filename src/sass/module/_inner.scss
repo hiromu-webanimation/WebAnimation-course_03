@@ -1,15 +1,15 @@
-@use "global" as *;
+@use 'global' as *;
 
 .inner {
   width: 100%;
-  max-width: $inner + strip-unit($padding-pc) * 2;
-  padding-right: $padding-pc;
-  padding-left: $padding-pc;
+  max-width: $inner + strip-unit(var(--padding-pc)) * 2;
+  padding-right: var(--padding-pc);
+  padding-left: var(--padding-pc);
   margin-right: auto;
   margin-left: auto;
   @include mq {
-    max-width: $inner + strip-unit($padding-sp) * 2;
-    padding-right: $padding-sp;
-    padding-left: $padding-sp;
+    max-width: $inner + strip-unit(var(--padding-sp)) * 2;
+    padding-right: var(--padding-sp);
+    padding-left: var(--padding-sp);
   }
 }

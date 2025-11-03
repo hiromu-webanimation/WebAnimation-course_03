@@ -4,12 +4,11 @@
 $inner: 1100px;
 // ※キャンパス幅ではなくインナーの幅を指す
 
-// 余白
-$padding-pc: 25px;
-$padding-sp: 20px;
 // CSS変数の定義
 :root {
-  // ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
+  // 余白
+  --padding-pc: 25px;
+  --padding-sp: 20px;
 
   --base-font-family: '';
   --second-font-family: '';
