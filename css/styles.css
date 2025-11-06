@@ -278,6 +278,163 @@ html {
   }
 }
 
+.mv {
+  overflow: hidden;
+  aspect-ratio: 1920/1340;
+  position: relative;
+  background-image: url("../images/common/mv-bg.jpg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mv__dec {
+  position: absolute;
+  top: -20px;
+  top: -1.25rem;
+  left: -20px;
+  left: -1.25rem;
+  width: calc(100% + 2.5rem);
+  height: calc(100% + 2.5rem);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mv__imgs {
+  margin-top: -96px;
+  margin-top: -6rem;
+  width: 1000px;
+  width: 62.5rem;
+  height: 1000px;
+  height: 62.5rem;
+  margin-inline: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.mv__main-img img {
+  border-radius: 50%;
+}
+
+.mv__title {
+  position: absolute;
+  left: 50%;
+  top: 270px;
+  top: 16.875rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  aspect-ratio: 1;
+  width: 240px;
+  width: 15rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background-color: #6d8e1b;
+  padding: 30px 14px;
+  padding: 1.875rem 0.875rem;
+}
+
+.mv__title-icon {
+  width: 130px;
+  width: 8.125rem;
+  aspect-ratio: 130/113;
+  margin-inline: auto;
+}
+
+.mv__title-icon img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.mv__title-text {
+  text-align: center;
+  margin-top: -5px;
+  margin-top: -0.3125rem;
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: 400;
+  font-family: "Darumadrop One", cursive;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.mv__text {
+  position: absolute;
+  top: 220px;
+  top: 13.75rem;
+  left: 50%;
+  -webkit-transform: translateX(-51%);
+          transform: translateX(-51%);
+  aspect-ratio: 913/458;
+  width: 913px;
+  width: 57.0625rem;
+}
+
+.mv__text img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.mv__slider-wrap {
+  position: absolute;
+  bottom: 400px;
+  bottom: 25rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.mv__slider {
+  border-bottom: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 21px;
+  gap: 1.3125rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.mv__slider:first-child {
+  border-top: 1px solid #fff;
+}
+
+.mv__slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 21px;
+  gap: 1.3125rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.mv__slider-text {
+  font-family: "Shippori Mincho", serif;
+  font-size: 81px;
+  font-size: 5.0625rem;
+  line-height: 1.5;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.mv__slider-img {
+  border-radius: 6.25rem;
+  aspect-ratio: 150/80;
+  overflow: hidden;
+  width: 150px;
+  width: 9.375rem;
+}
+
 /* はじめましてセクション */
 .intro {
   position: relative;
