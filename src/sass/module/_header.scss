@@ -1,13 +1,32 @@
 @use 'global' as *;
 
+.header {
+  position: fixed;
+  z-index: 100;
+  top: rem(40);
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__inner {
+  width: 100%;
+  max-width: rem(1162);
+  margin: 0 auto;
+  padding: 0 var(--padding-pc);
+}
+
 .header__nav {
   display: flex;
   align-items: center;
-  gap: rem(64);
+  justify-content: center;
+  gap: rem(30);
   line-height: 1.2;
   padding: rem(24) rem(80);
   border-radius: rem(1000);
   box-shadow: 0px rem(4) rem(15) 0px rgba(37, 123, 6, 0.27);
+  background: rgba($color: #fff, $alpha: 0.8);
+  backdrop-filter: blur(rem(5));
   width: 100%;
   @include mq {
     gap: rem(32);

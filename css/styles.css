@@ -25,10 +25,10 @@ html {
 }
 @media (min-width: 768px) {
   html {
-    font-size: 1.4545454545vw;
+    font-size: 0.8333333333vw;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1920px) {
   html {
     font-size: 16px;
   }
@@ -170,20 +170,22 @@ html {
   word-wrap: break-word;
 }
 
-.inner {
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 40px;
+  top: 2.5rem;
+  right: 0;
+  left: 0;
   width: 100%;
-  max-width: 1150px;
-  padding-right: 25px;
-  padding-left: 25px;
-  margin-right: auto;
-  margin-left: auto;
 }
-@media screen and (max-width: 767px) {
-  .inner {
-    max-width: 1140px;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
+
+.header__inner {
+  width: 100%;
+  max-width: 1162px;
+  max-width: 72.625rem;
+  margin: 0 auto;
+  padding: 0 25px;
 }
 
 .header__nav {
@@ -193,14 +195,20 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 64px;
-  gap: 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  gap: 1.875rem;
   line-height: 1.2;
   padding: 24px 80px;
   padding: 1.5rem 5rem;
   border-radius: 62.5rem;
   -webkit-box-shadow: 0px 0.25rem 0.9375rem 0px rgba(37, 123, 6, .27);
           box-shadow: 0px 0.25rem 0.9375rem 0px rgba(37, 123, 6, .27);
+  background: rgba(255, 255, 255, .8);
+  backdrop-filter: blur(5px);
+  backdrop-filter: blur(0.3125rem);
   width: 100%;
 }
 @media screen and (max-width: 767px) {
@@ -254,188 +262,20 @@ html {
   }
 }
 
-/* メインビジュアル */
-.hero {
-  position: relative;
+.inner {
   width: 100%;
-  height: 100vh;
-  min-height: 1340px;
-  min-height: 83.75rem;
-  background-color: #f3f2e9;
-  overflow: hidden;
+  max-width: 1970px;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: auto;
 }
-
-.hero__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/common/mv-bg.jpg");
-  background-repeat: repeat;
-  background-size: 8.61875rem 7.7875rem;
-  background-position: top left;
-  z-index: 1;
-}
-
-.hero__circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 1000px;
-  width: 62.5rem;
-  height: 1000px;
-  height: 62.5rem;
-  background-image: url("../images/common/mv.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-}
-
-/* スクロールテキスト */
-.hero__scroll-text {
-  position: absolute;
-  left: -234px;
-  left: -14.625rem;
-  top: 735px;
-  top: 45.9375rem;
-  z-index: 3;
-  width: 100%;
-  max-width: 2000px;
-  max-width: 125rem;
-}
-
-.hero__scroll-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 21.308px;
-  gap: 1.33175rem;
-  border-top: 1.332px solid #fff;
-  border-top: 0.08325rem solid #fff;
-  border-bottom: 1.332px solid #fff;
-  border-bottom: 0.08325rem solid #fff;
-  padding: 20px 0;
-  padding: 1.25rem 0;
-  white-space: nowrap;
-}
-.hero__scroll-row--bottom {
-  border-top: none;
-}
-
-.hero__scroll-item {
-  font-family: "Shippori Mincho", serif;
-  font-size: 81.474px;
-  font-size: 5.092125rem;
-  line-height: 1.5;
-  color: #fff;
-  white-space: nowrap;
-}
-
-.hero__scroll-icon {
-  display: inline-block;
-  width: 150px;
-  width: 9.375rem;
-  height: 80px;
-  height: 5rem;
-  background-image: url("../images/common/dummy.jpg");
-  background-size: cover;
-  background-position: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-/* ロゴ */
-.hero__logo {
-  position: absolute;
-  top: 173px;
-  top: 10.8125rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 20px;
-  gap: 1.25rem;
-}
-
-.hero__logo-circle {
-  width: 240px;
-  width: 15rem;
-  height: 240px;
-  height: 15rem;
-  background-image: url("../images/common/mv.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.hero__logo-icon {
-  width: 130.794px;
-  width: 8.174625rem;
-  height: 113.135px;
-  height: 7.0709375rem;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.hero__logo-text {
-  font-family: "Darumadrop One", cursive;
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 1.5;
-  color: #fff;
-  margin: 0;
-  font-weight: 400;
-}
-
-/* 装飾イラスト */
-.hero__deco {
-  position: absolute;
-  z-index: 3;
-}
-.hero__deco--left {
-  top: 141.75px;
-  top: 8.859375rem;
-  left: 507.72px;
-  left: 31.7325rem;
-}
-.hero__deco--right {
-  top: 158.78px;
-  top: 9.92375rem;
-  right: 527.69px;
-  right: 32.980625rem;
-}
-
-.hero__deco-image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+@media screen and (max-width: 767px) {
+  .inner {
+    max-width: 1960px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 /* はじめましてセクション */
@@ -446,11 +286,13 @@ html {
   padding: 6.25rem 0;
   background-color: #f3f2e9;
   z-index: 5;
+  min-height: 1200px;
+  min-height: 75rem;
 }
 
 .intro__inner {
-  max-width: 666px;
-  max-width: 41.625rem;
+  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   padding: 0 25px;
   text-align: center;
