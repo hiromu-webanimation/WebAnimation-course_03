@@ -2,13 +2,13 @@
 
 .inner {
   width: 100%;
-  max-width: $inner + strip-unit(var(--padding-pc)) * 2;
+  max-width: calc(#{$inner} + var(--padding-pc) * 2);
   padding-right: var(--padding-pc);
   padding-left: var(--padding-pc);
   margin-right: auto;
   margin-left: auto;
   @include mq {
-    max-width: $inner + strip-unit(var(--padding-sp)) * 2;
+    max-width: calc(#{$inner} + var(--padding-sp) * 2);
     padding-right: var(--padding-sp);
     padding-left: var(--padding-sp);
   }

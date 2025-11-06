@@ -136,6 +136,8 @@ const clean = (done) => {
 // npx gulpで出力する内容
 exports.default = series(series(clean, cssSass, imgImagemin, gulpWebp), parallel(watchFiles, browserSyncFunc));
 
+// SCSSのみコンパイル
+exports.cssSass = cssSass;
 
 // npx gulp del → 画像最適化（重複を削除）
 // exports.del = series(series(clean, cssSass, imgImagemin), parallel(watchFiles, browserSyncFunc));

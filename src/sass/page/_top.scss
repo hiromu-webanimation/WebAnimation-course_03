@@ -1,3 +1,179 @@
 @use "global" as *;
 
+/* メインビジュアル */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: rem(1340);
+  background-color: #f3f2e9;
+  overflow: hidden;
+}
 
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/common/mv-bg.jpg');
+  background-repeat: repeat;
+  background-size: rem(137.9) rem(124.6);
+  background-position: top left;
+  z-index: 1;
+}
+
+.hero__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(1000);
+  height: rem(1000);
+  background-image: url('../images/common/mv.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+
+/* スクロールテキスト */
+.hero__scroll-text {
+  position: absolute;
+  left: rem(-234);
+  top: rem(735);
+  z-index: 3;
+  width: 100%;
+  max-width: rem(2000);
+}
+
+.hero__scroll-row {
+  display: flex;
+  align-items: center;
+  gap: rem(21.308);
+  border-top: rem(1.332) solid #fff;
+  border-bottom: rem(1.332) solid #fff;
+  padding: rem(20) 0;
+  white-space: nowrap;
+
+  &--bottom {
+    border-top: none;
+  }
+}
+
+.hero__scroll-item {
+  font-family: var(--second-font-family);
+  font-size: rem(81.474);
+  line-height: 1.5;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.hero__scroll-icon {
+  display: inline-block;
+  width: rem(150);
+  height: rem(80);
+  background-image: url('../images/common/dummy.jpg');
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* ロゴ */
+.hero__logo {
+  position: absolute;
+  top: rem(173);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(20);
+}
+
+.hero__logo-circle {
+  width: rem(240);
+  height: rem(240);
+  background-image: url('../images/common/mv.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__logo-icon {
+  width: rem(130.794);
+  height: rem(113.135);
+  object-fit: contain;
+}
+
+.hero__logo-text {
+  font-family: var(--darumadrop-one);
+  font-size: rem(36);
+  line-height: 1.5;
+  color: #fff;
+  margin: 0;
+  font-weight: var(--regular);
+}
+
+/* 装飾イラスト */
+.hero__deco {
+  position: absolute;
+  z-index: 3;
+
+  &--left {
+    top: rem(141.75);
+    left: rem(507.72);
+  }
+
+  &--right {
+    top: rem(158.78);
+    right: rem(527.69);
+  }
+}
+
+.hero__deco-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* はじめましてセクション */
+.intro {
+  position: relative;
+  width: 100%;
+  padding: rem(100) 0;
+  background-color: #f3f2e9;
+  z-index: 5;
+}
+
+.intro__inner {
+  max-width: rem(666);
+  margin: 0 auto;
+  padding: 0 var(--padding-pc);
+  text-align: center;
+}
+
+.intro__title {
+  font-family: var(--darumadrop-one);
+  font-size: rem(48);
+  line-height: 1.5;
+  color: #6d8e1b;
+  margin: 0 0 rem(40) 0;
+  font-weight: var(--regular);
+}
+
+.intro__text {
+  font-family: var(--base-font-family);
+  font-size: rem(24);
+  line-height: 2.1;
+  color: #282828;
+
+  p {
+    margin: 0;
+    white-space: pre-wrap;
+  }
+}
