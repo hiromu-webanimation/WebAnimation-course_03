@@ -327,6 +327,131 @@ html {
   padding: 1.875rem 0.875rem;
 }
 
+.mv__title-yuge {
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, .7) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.mv__title-yuge:nth-of-type(1) {
+  top: -60px;
+  top: -3.75rem;
+  left: 20%;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-filter: blur(0.3125rem);
+          filter: blur(0.3125rem);
+  width: 60px;
+  width: 3.75rem;
+}
+
+.mv__title-yuge:nth-of-type(2) {
+  top: -35px;
+  top: -2.1875rem;
+  left: 15%;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="8" /></filter></svg>#filter');
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  -webkit-filter: blur(0.5rem);
+          filter: blur(0.5rem);
+  width: 30px;
+  width: 1.875rem;
+}
+
+.mv__title-yuge:nth-of-type(3) {
+  top: -24px;
+  top: -1.5rem;
+  left: 20%;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-filter: blur(0.625rem);
+          filter: blur(0.625rem);
+  width: 40px;
+  width: 2.5rem;
+}
+
+.mv__title-yuge:nth-of-type(4) {
+  top: -10px;
+  top: -0.625rem;
+  left: 35%;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-filter: blur(0.3125rem);
+          filter: blur(0.3125rem);
+  width: 60px;
+  width: 3.75rem;
+}
+
+.mv__title-yuge:nth-of-type(5) {
+  top: 5px;
+  top: 0.3125rem;
+  left: 50%;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-filter: blur(0.3125rem);
+          filter: blur(0.3125rem);
+  width: 60px;
+  width: 3.75rem;
+}
+
+.mv__title-yuge:nth-of-type(6) {
+  top: 20px;
+  top: 1.25rem;
+  left: 65%;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-filter: blur(0.625rem);
+          filter: blur(0.625rem);
+  width: 80px;
+  width: 5rem;
+}
+
+.mv__title-yuge:nth-of-type(7) {
+  top: 30px;
+  top: 1.875rem;
+  left: 50%;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-filter: blur(0.3125rem);
+          filter: blur(0.3125rem);
+  width: 60px;
+  width: 3.75rem;
+}
+
+.mv__title-yuge:nth-of-type(8) {
+  top: 50px;
+  top: 3.125rem;
+  left: 50%;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-filter: blur(0.3125rem);
+          filter: blur(0.3125rem);
+  width: 60px;
+  width: 3.75rem;
+}
+
+.mv__title-yuge:nth-of-type(9) {
+  top: 70px;
+  top: 4.375rem;
+  left: 30%;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-filter: blur(0.625rem);
+          filter: blur(0.625rem);
+  width: 100px;
+  width: 6.25rem;
+}
+
 .mv__title-icon {
   width: 130px;
   width: 8.125rem;
@@ -387,8 +512,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 21px;
-  gap: 1.3125rem;
+  gap: 20px;
+  gap: 1.25rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -398,6 +523,32 @@ html {
   border-top: 1px solid #fff;
 }
 
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-50% - 0.625rem));
+            transform: translateX(calc(-50% - 0.625rem));
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-50% - 0.625rem));
+            transform: translateX(calc(-50% - 0.625rem));
+  }
+}
+.mv__slider--top {
+  -webkit-animation: slideLeft 30s linear infinite;
+          animation: slideLeft 30s linear infinite;
+}
+
 .mv__slider-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -405,8 +556,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 21px;
-  gap: 1.3125rem;
+  gap: 20px;
+  gap: 1.25rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -428,6 +579,32 @@ html {
   overflow: hidden;
   width: 150px;
   width: 9.375rem;
+}
+
+@-webkit-keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(calc(-50% - 0.625rem));
+            transform: translateX(calc(-50% - 0.625rem));
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(calc(-50% - 0.625rem));
+            transform: translateX(calc(-50% - 0.625rem));
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.mv__slider--bottom {
+  -webkit-animation: slideRight 30s linear infinite;
+          animation: slideRight 30s linear infinite;
 }
 
 /* はじめましてセクション */
@@ -495,5 +672,59 @@ html {
 .intro__text p {
   margin: 0;
   white-space: pre-wrap;
+}
+
+.onigiri {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.onigiri--1 {
+  -webkit-transform: translate(-23.125rem, 6.875rem);
+          transform: translate(-23.125rem, 6.875rem);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.onigiri--2 {
+  -webkit-transform: translate(-40rem, -2.5rem);
+          transform: translate(-40rem, -2.5rem);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.onigiri--3 {
+  -webkit-transform: translate(-10.625rem, -33.125rem);
+          transform: translate(-10.625rem, -33.125rem);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.onigiri--4 {
+  -webkit-transform: translate(36.25rem, 2.5rem);
+          transform: translate(36.25rem, 2.5rem);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.onigiri--5 {
+  -webkit-transform: translate(21.875rem, 1.875rem);
+          transform: translate(21.875rem, 1.875rem);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
+}
+
+.onigiri--6 {
+  -webkit-transform: translate(41.875rem, -30rem);
+          transform: translate(41.875rem, -30rem);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transform-box: fill-box;
 }
 /*# sourceMappingURL=styles.css.map */

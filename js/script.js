@@ -1,51 +1,218 @@
+jQuery(function ($) {
+  // この中であればWordpressでも「$」が使用可能になる
+  // op
+  gsap.set('.header', {
+    opacity: 0,
+    y: -100,
+  });
 
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+  gsap.set('.mv__slider-wrap', {
+    opacity: 0,
+  });
 
-  var topBtn = $('.pagetop');
-  topBtn.hide();
+  const op = gsap.timeline();
 
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
+  gsap.set('.mv__text', {
+    scale: 0.6,
+  });
+  // gsap.set('.mv__title', {
+  //   scale: 0.4,
+  // });
+
+  // テキスト順番に
+  op.fromTo(
+    '.mv__text .text-right',
+    {
+      opacity: 0,
+      filter: 'blur(10px)',
+    },
+    {
+      opacity: 1,
+      filter: 'blur(0px)',
+      ease: 'power3.inOut',
+      duration: 0.7,
+      stagger: 0.2,
     }
-  });
+  )
+    .fromTo(
+      '.mv__text .text-left',
+      {
+        opacity: 0,
+        filter: 'blur(10px)',
+      },
+      {
+        opacity: 1,
+        filter: 'blur(0px)',
+        ease: 'power3.inOut',
+        duration: 0.7,
+        stagger: 0.2,
+      },
+      '-=0.4'
+    )
+    .fromTo(
+      '.mv__title',
+      {
+        scale: 1,
+        opacity: 0,
+        filter: 'blur(5px)',
+      },
+      {
+        scale: 0.6,
+        opacity: 1,
+        filter: 'blur(0px)',
+        ease: 'power2.inOut',
+        duration: 1.8,
+      },
+      '-=0.7'
+    )
+    .fromTo(
+      '.mv__title-yuge',
+      {
+        scale: 0.95,
+        opacity: 0,
+        y: 0,
+      },
+      {
+        scale: 1.1,
+        opacity: 1,
+        y: -120,
+        ease: 'none',
+        duration: 1.7,
+        stagger: 0.14,
+      },
+      '-=1.3'
+    )
+    .to(
+      '.mv__title-yuge',
+      {
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.2,
+      },
+      '-=1.4'
+    )
+    .to(
+      'mv__title , .mv__text',
+      {
+        opacity: 0,
+        duration: 1,
+      },
+      '-=0.5'
+    )
+    .fromTo(
+      '.mv__main-img',
+      {
+        scale: 0,
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1.2,
+        ease: 'back.out(1.7)',
+      },
+      '-=0.7'
+    )
+    .to(
+      '.mv__title , .mv__text',
+      {
+        opacity: 1,
+        duration: 1.2,
+      },
+      '<'
+    )
+    .to(
+      '.mv__title',
+      {
+        scale: 1,
+        duration: 1.2,
+        ease: 'back.out(1.7)',
+      },
+      '<'
+    )
+    .to(
+      '.mv__text',
+      {
+        scale: 1,
+        duration: 1.2,
+        ease: 'back.out(1.7)',
+      },
+      '<'
+    )
+    .to(
+      '.onigiri',
+      {
+        y: 0,
+        x: 0,
+        rotate: 0,
+        duration: 2,
+        ease: 'power3.out',
+      },
+      '-=1.1'
+    )
 
-  // ボタンをクリックしたらスクロールして上に戻る
-  topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
-    return false;
-  });
+    .fromTo(
+      '.mv__dec',
 
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
-  $(document).on('click', 'a[href*="#"]', function () {
-    let time = 400;
-    let header = $('header').innerHeight();
-    let target = $(this.hash);
-    if (!target.length) return;
-    let targetY = target.offset().top - header;
-    $('html,body').animate({ scrollTop: targetY }, time, 'swing');
-    return false;
-  });
-
-  //ドロワーメニュー
-  $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
-
-  });
-
-
-
-  
-
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power3.inOut',
+      },
+      '<'
+    )
+    .to(
+      '.mv__slider-wrap',
+      {
+        opacity: 1,
+        duration: 0.8,
+        ease: 'power3.inOut',
+      },
+      '-=1.8'
+    )
+    .fromTo(
+      '.mv__slider--top-wrap',
+      {
+        clipPath: 'inset(0% 0% 100% 0%)',
+        yPercent: 100,
+        opacity: 0,
+      },
+      {
+        clipPath: 'inset(0% 0% 0% 0%)',
+        yPercent: 0,
+        opacity: 1,
+        duration: 1.6,
+        ease: 'power3.inOut',
+      },
+      '<'
+    )
+    .fromTo(
+      '.mv__slider--bottom-wrap',
+      {
+        clipPath: 'inset(100% 0% 0% 0%)',
+        yPercent: -100,
+        opacity: 0,
+      },
+      {
+        clipPath: 'inset(0% 0% 0% 0%)',
+        yPercent: 0,
+        opacity: 1,
+        duration: 1.6,
+        ease: 'power3.inOut',
+      },
+      '<'
+    )
+    .to(
+      '.header',
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.6,
+        ease: 'power3.inOut',
+      },
+      '<'
+    );
 });
