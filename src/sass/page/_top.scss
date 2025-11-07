@@ -13,12 +13,15 @@
 
 .mv__dec {
   position: absolute;
-  top: rem(-20);
+  top: 0;
   left: rem(-20);
-  width: calc(100% + rem(40));
-  height: calc(100% + rem(40));
+  width: calc(100% + rem(20));
   z-index: 1;
   pointer-events: none;
+}
+
+.mv__dec * {
+  pointer-events: auto;
 }
 
 .mv__imgs {
@@ -125,6 +128,7 @@
   line-height: 1.5;
   color: var(--white);
   white-space: nowrap;
+  font-weight: var(--regular);
 }
 
 .mv__slider-img {
@@ -139,12 +143,29 @@
 
 /* はじめましてセクション */
 .intro {
+  overflow: hidden;
   position: relative;
+  z-index: 3;
   width: 100%;
   padding: rem(100) 0;
-  background-color: #f3f2e9;
+  background: linear-gradient(to bottom, transparent 0 rem(218), #f3f2e9 rem(218) 100%);
   z-index: 5;
   min-height: rem(1200);
+  padding: rem(64) 0;
+  margin-top: rem(-300);
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + rem(168));
+    height: rem(535);
+    clip-path: ellipse(50% 50% at 50% 50%);
+    background-color: #f3f2e9;
+  }
 }
 
 .intro__inner {
@@ -152,6 +173,8 @@
   margin: 0 auto;
   padding: 0 var(--padding-pc);
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .intro__title {

@@ -11,16 +11,12 @@
 
 .header__inner {
   width: 100%;
-  max-width: rem(1162);
+  max-width: rem(1262);
   margin: 0 auto;
   padding: 0 var(--padding-pc);
 }
 
 .header__nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: rem(30);
   line-height: 1.2;
   padding: rem(24) rem(80);
   border-radius: rem(1000);
@@ -37,6 +33,7 @@
 .header__list {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: rem(64);
   list-style: none;
   margin: 0;

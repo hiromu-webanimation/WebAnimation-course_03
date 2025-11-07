@@ -182,24 +182,13 @@ html {
 
 .header__inner {
   width: 100%;
-  max-width: 1162px;
-  max-width: 72.625rem;
+  max-width: 1262px;
+  max-width: 78.875rem;
   margin: 0 auto;
   padding: 0 25px;
 }
 
 .header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 30px;
-  gap: 1.875rem;
   line-height: 1.2;
   padding: 24px 80px;
   padding: 1.5rem 5rem;
@@ -225,6 +214,9 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 64px;
   gap: 4rem;
   list-style: none;
@@ -289,14 +281,16 @@ html {
 
 .mv__dec {
   position: absolute;
-  top: -20px;
-  top: -1.25rem;
+  top: 0;
   left: -20px;
   left: -1.25rem;
-  width: calc(100% + 2.5rem);
-  height: calc(100% + 2.5rem);
+  width: calc(100% + 1.25rem);
   z-index: 1;
   pointer-events: none;
+}
+
+.mv__dec * {
+  pointer-events: auto;
 }
 
 .mv__imgs {
@@ -425,6 +419,7 @@ html {
   line-height: 1.5;
   color: #fff;
   white-space: nowrap;
+  font-weight: 400;
 }
 
 .mv__slider-img {
@@ -437,14 +432,36 @@ html {
 
 /* はじめましてセクション */
 .intro {
+  overflow: hidden;
   position: relative;
+  z-index: 3;
   width: 100%;
   padding: 100px 0;
   padding: 6.25rem 0;
-  background-color: #f3f2e9;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(13.625rem, #f3f2e9));
+  background: linear-gradient(to bottom, transparent 0 13.625rem, #f3f2e9 13.625rem 100%);
   z-index: 5;
   min-height: 1200px;
   min-height: 75rem;
+  padding: 64px 0;
+  padding: 4rem 0;
+  margin-top: -300px;
+  margin-top: -18.75rem;
+}
+.intro::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: calc(100% + 10.5rem);
+  height: 535px;
+  height: 33.4375rem;
+  -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+          clip-path: ellipse(50% 50% at 50% 50%);
+  background-color: #f3f2e9;
 }
 
 .intro__inner {
@@ -453,6 +470,8 @@ html {
   margin: 0 auto;
   padding: 0 25px;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .intro__title {
