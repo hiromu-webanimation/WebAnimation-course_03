@@ -171,7 +171,7 @@ jQuery(function ($) {
         duration: 0.8,
         ease: 'power3.inOut',
       },
-      '-=1.8'
+      '-=1.5'
     )
     .fromTo(
       '.mv__slider--top-wrap',
