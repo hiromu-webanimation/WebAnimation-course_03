@@ -12,7 +12,7 @@ jQuery(function ($) {
 
   const op = gsap.timeline();
 
-  gsap.set('.mv__text', {
+  gsap.set('.mv__text svg', {
     scale: 0.6,
   });
   // gsap.set('.mv__title', {
@@ -131,7 +131,7 @@ jQuery(function ($) {
       '<'
     )
     .to(
-      '.mv__text',
+      '.mv__text svg',
       {
         scale: 1,
         duration: 1.2,
